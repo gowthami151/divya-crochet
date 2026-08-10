@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Divya's Crochet World 🧶</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- FLOATING DECORATIONS -->
+
+<div class="floating f1">🧶</div>
+<div class="floating f2">🌸</div>
+<div class="floating f3">🪻</div>
+<div class="floating f4">🧵</div>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🧶 <span>Divya's Crochet</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#creations">Creations</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+    </nav>
+
+    <button class="theme-btn"
+            onclick="toggleTheme()">
+        🌙
+    </button>
+
+</header>
+
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="welcome">
+            ✨ WELCOME TO MY CREATIVE WORLD ✨
+        </div>
+
+        <h1>
+            Stitched with
+            <span>Love</span>
+            ❤️
+        </h1>
+
+        <h2>
+            Welcome to Divya's Crochet World 🧶
+        </h2>
+
+        <p>
+            A colorful collection of handmade crochet
+            creations, crafted stitch by stitch with
+            creativity, patience and love.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#creations"
+               class="primary-btn">
+                Explore My Creations ✨
+            </a>
+
+            <a href="#about"
+               class="secondary-btn">
+                Meet Divya 💕
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-art">
+
+        <div class="yarn-circle">
+            🧶
+        </div>
+
+        <div class="mini-card">
+            🌸 Handmade
+        </div>
+
+        <div class="mini-card second">
+            💕 Made with Love
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats-section">
+
+    <div class="stat-box">
+
+        <div class="stat-icon">
+            🧶
+        </div>
+
+        <h2 id="creationCount">
+            0
+        </h2>
+
+        <p>Creations</p>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <div class="stat-icon">
+            ❤️
+        </div>
+
+        <h2 id="totalLikes">
+            0
+        </h2>
+
+        <p>Likes</p>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <div class="stat-icon">
+            👁️
+        </div>
+
+        <h2 id="totalViews">
+            0
+        </h2>
+
+        <p>Views</p>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <div class="stat-icon">
+            ⭐
+        </div>
+
+        <h2>
+            ∞
+        </h2>
+
+        <p>Creativity</p>
+
+    </div>
+
+</section>
+
+
+<!-- CREATIONS -->
+
+<section id="creations"
+         class="creations-section">
+
+    <div class="section-title">
+
+        <span>
+            🧶 MY HANDMADE COLLECTION
+        </span>
+
+        <h2>
+            A Little Gallery of Happiness 🌸
+        </h2>
+
+        <p>
+            Every piece has its own story.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        🔍
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search my creations..."
+            onkeyup="searchCreations()">
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="filters">
+
+        <button onclick="filterItems('all')">
+            ✨ All
+        </button>
+
+        <button onclick="filterItems('flower')">
+            🌸 Flowers
+        </button>
+
+        <button onclick="filterItems('bag')">
+            👜 Bags
+        </button>
+
+        <button onclick="filterItems('toy')">
+            🧸 Toys
+        </button>
+
+        <button onclick="filterItems('dress')">
+            👗 Clothes
+        </button>
+
+    </div>
+
+
+    <!-- GALLERY -->
+
+    <div class="gallery">
+
+
+        <!-- ITEM 1 -->
+
+        <article class="creation-card flower">
+
+            <div class="photo">
+
+                <img src="images/flower.jpg"
+                     alt="Crochet Flower"
+                     onclick="openImage(this.src)">
+
+                <span class="tag">
+                    🌸 FLOWER
+                </span>
+
+                <button class="favorite"
+                        onclick="favoriteItem(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3>
+                    Pink Crochet Flower
+                </h3>
+
+                <p>
+                    A tiny handmade flower
+                    full of color and love.
+                </p>
+
+                <div class="card-info">
+
+                    <span>
+                        ❤️ <b id="likes1">0</b>
+                    </span>
+
+                    <span>
+                        👁️ <b id="views1">0</b>
+                    </span>
+
+                </div>
+
+                <button class="like-btn"
+                        onclick="likePost(1,this)">
+                    ❤️ Like
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 2 -->
+
+        <article class="creation-card bag">
+
+            <div class="photo">
+
+                <img src="images/bag.jpg"
+                     alt="Crochet Bag"
+                     onclick="openImage(this.src)">
+
+                <span class="tag">
+                    👜 BAG
+                </span>
+
+                <button class="favorite"
+                        onclick="favoriteItem(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3>
+                    Colorful Crochet Bag
+                </h3>
+
+                <p>
+                    A creative handmade
+                    crochet bag.
+                </p>
+
+                <div class="card-info">
+
+                    <span>
+                        ❤️ <b id="likes2">0</b>
+                    </span>
+
+                    <span>
+                        👁️ <b id="views2">0</b>
+                    </span>
+
+                </div>
+
+                <button class="like-btn"
+                        onclick="likePost(2,this)">
+                    ❤️ Like
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 3 -->
+
+        <article class="creation-card toy">
+
+            <div class="photo">
+
+                <img src="images/teddy.jpg"
+                     alt="Crochet Teddy"
+                     onclick="openImage(this.src)">
+
+                <span class="tag">
+                    🧸 TOY
+                </span>
+
+                <button class="favorite"
+                        onclick="favoriteItem(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3>
+                    Cute Crochet Teddy
+                </h3>
+
+                <p>
+                    A soft-looking handmade
+                    crochet creation.
+                </p>
+
+                <div class="card-info">
+
+                    <span>
+                        ❤️ <b id="likes3">0</b>
+                    </span>
+
+                    <span>
+                        👁️ <b id="views3">0</b>
+                    </span>
+
+                </div>
+
+                <button class="like-btn"
+                        onclick="likePost(3,this)">
+                    ❤️ Like
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ITEM 4 -->
+
+        <article class="creation-card dress">
+
+            <div class="photo">
+
+                <img src="images/dress.jpg"
+                     alt="Crochet Dress"
+                     onclick="openImage(this.src)">
+
+                <span class="tag">
+                    👗 CLOTHES
+                </span>
+
+                <button class="favorite"
+                        onclick="favoriteItem(this)">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3>
+                    Handmade Crochet Dress
+                </h3>
+
+                <p>
+                    A beautiful creative
+                    crochet design.
+                </p>
+
+                <div class="card-info">
+
+                    <span>
+                        ❤️ <b id="likes4">0</b>
+                    </span>
+
+                    <span>
+                        👁️ <b id="views4">0</b>
+                    </span>
+
+                </div>
+
+                <button class="like-btn"
+                        onclick="likePost(4,this)">
+                    ❤️ Like
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- MOST LOVED -->
+
+<section class="loved-section">
+
+    <div class="section-title">
+
+        <span>
+            ❤️ COMMUNITY FAVORITES
+        </span>
+
+        <h2>
+            Most Loved Creations
+        </h2>
+
+    </div>
+
+    <div class="loved-box">
+
+        <div class="loved-icon">
+            ❤️
+        </div>
+
+        <h2>
+            Your creations can become
+            someone's favorite!
+        </h2>
+
+        <p>
+            Every like is a little appreciation
+            for Divya's creativity.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about"
+         class="about-section">
+
+    <div class="about-art">
+
+        <div class="about-circle">
+            🧶
+        </div>
+
+        <span class="about-flower">
+            🌸
+        </span>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span>
+            💕 ABOUT THE CREATOR
+        </span>
+
+        <h2>
+            Meet Divya
+        </h2>
+
+        <p>
+            Hi! I'm Divya. Welcome to my little
+            corner of creativity.
+        </p>
+
+        <p>
+            Crochet is more than just yarn and
+            stitches for me. It's a way to turn
+            imagination into something beautiful
+            and handmade.
+        </p>
+
+        <div class="qualities">
+
+            <div>
+                🧶
+                <b>Creative</b>
+            </div>
+
+            <div>
+                🎨
+                <b>Artistic</b>
+            </div>
+
+            <div>
+                💕
+                <b>Handmade</b>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JOURNEY -->
+
+<section id="journey"
+         class="journey-section">
+
+    <div class="section-title">
+
+        <span>
+            🧵 THE CREATIVE JOURNEY
+        </span>
+
+        <h2>
+            From Yarn to Art ✨
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                🧶
+            </div>
+
+            <div>
+
+                <h3>
+                    Pick the Yarn
+                </h3>
+
+                <p>
+                    Choosing colors and textures
+                    for every new creation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                🪡
+            </div>
+
+            <div>
+
+                <h3>
+                    Stitch by Stitch
+                </h3>
+
+                <p>
+                    Turning simple yarn into
+                    beautiful patterns.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                🌸
+            </div>
+
+            <div>
+
+                <h3>
+                    Create Something Beautiful
+                </h3>
+
+                <p>
+                    And finally, a handmade creation
+                    is ready to be admired.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IMAGE POPUP -->
+
+<div id="imageModal"
+     class="modal"
+     onclick="closeImage()">
+
+    <span class="close">
+        ×
+    </span>
+
+    <img id="modalImage">
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        🧶 Divya's Crochet
+    </div>
+
+    <p>
+        Handmade with love.
+        Created with imagination.
+        Shared with happiness. ❤️
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#creations">Creations</a>
+
+        <a href="#about">About</a>
+
+        <a href="#journey">Journey</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Divya's Crochet World
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
